@@ -40,10 +40,10 @@
 
 struct sslutil_tls_context
 {
-  FAR const char *ca_dir;
-  FAR const char *ca_file;
-  FAR const char *cli_file;
-  FAR const char *privkey;
+  FAR const char *ca_dir;     /* Directory path storing certificates */
+  FAR const char *ca_file;    /* A file path of a certificate */
+  FAR const char *cli_file;   /* Client side certificate file path */
+  FAR const char *privkey;    /* The private key of client certificate file */
   FAR const char *custom_id;
 };
 

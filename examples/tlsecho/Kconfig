@@ -1,0 +1,25 @@
+
+config EXAMPLES_TLSECHO
+	tristate "'sslutil' sample: Simple TLS Echo Client"
+	default n
+	---help---
+		Enable the tlsecho app
+
+if EXAMPLES_TLSECHO
+
+config EXAMPLES_TLSECHO_PROGNAME
+	string "Program name"
+	default "tlsecho"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_TLSECHO_PRIORITY
+	int "tlsecho task priority"
+	default 100
+
+config EXAMPLES_TLSECHO_STACKSIZE
+	int "tlsecho stack size"
+	default 8192
+
+endif
