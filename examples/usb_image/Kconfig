@@ -1,0 +1,22 @@
+
+config EXAMPLES_USB_IMAGE
+	tristate "USB image sender example"
+	default n
+	---help---
+		Send 640x480 8-bit grayscale images over USB CDC/ACM
+
+if EXAMPLES_USB_IMAGE
+
+config EXAMPLES_USB_IMAGE_PROGNAME
+	string "Program name"
+	default "usb_image"
+
+config EXAMPLES_USB_IMAGE_PRIORITY
+	int "usb_image task priority"
+	default 100
+
+config EXAMPLES_USB_IMAGE_STACKSIZE
+	int "usb_image stack size"
+	default 4096
+
+endif
