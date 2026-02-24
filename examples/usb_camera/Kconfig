@@ -1,0 +1,24 @@
+
+config EXAMPLES_USB_CAMERA
+	tristate "USB camera streaming example"
+	default n
+	---help---
+		Stream real camera images (JPEG or grayscale) from the Spresense
+		camera board over USB CDC/ACM.  Uses the same frame protocol as
+		the usb_image example so the same PC-side receiver works for both.
+
+if EXAMPLES_USB_CAMERA
+
+config EXAMPLES_USB_CAMERA_PROGNAME
+	string "Program name"
+	default "usb_camera"
+
+config EXAMPLES_USB_CAMERA_PRIORITY
+	int "usb_camera task priority"
+	default 100
+
+config EXAMPLES_USB_CAMERA_STACKSIZE
+	int "usb_camera stack size"
+	default 4096
+
+endif
